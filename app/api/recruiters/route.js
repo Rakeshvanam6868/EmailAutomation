@@ -1,5 +1,5 @@
+// app/api/recruiters/route.js
 import prisma from '@/lib/prisma';
-// import { fetchAndAddRecruiters } from '@/services/recruiterFetcher';
 
 export async function POST(req) {
   const body = await req.json();
@@ -27,6 +27,6 @@ export async function GET() {
 }
 
 export async function PUT() {
-//   await fetchAndAddRecruiters();
-  return Response.json({ message: 'Recruiters fetched and added.' });
+  // Implement logic if needed
+  return Response.json({ message: 'PUT request received' });
 }

@@ -1,3 +1,4 @@
+// app/api/emails/send/route.js
 import prisma from '@/lib/prisma';
 import { getDefaultEmailContent } from '@/utils/emailTemplate';
 import { sendEmail } from '@/utils/sendEmail';
@@ -11,13 +12,8 @@ export async function POST(req) {
       return Response.json({ error: 'Missing recruiter ID' }, { status: 400 });
     }
 
-    const parsedRecruiterId = parseInt(recruiterId, 10);
-    if (isNaN(parsedRecruiterId)) {
-      return Response.json({ error: 'Invalid recruiter ID' }, { status: 400 });
-    }
-
     const recruiter = await prisma.recruiter.findUnique({
-      where: { id: parsedRecruiterId },
+      where: { id: recruiterId }
     });
 
     if (!recruiter) {
@@ -30,40 +26,32 @@ export async function POST(req) {
       return Response.json({ error: 'User not found' }, { status: 404 });
     }
 
-    // Use custom email if set; fallback to provided or default
-    const html =
-      (recruiter.isEmailCustomized ? recruiter.customBody : null) ||
-      customBody ||
-      getDefaultEmailContent(recruiter, user);
+    const html = recruiter.isEmailCustomized ? recruiter.customBody : (customBody || getDefaultEmailContent(recruiter, user));
+    const emailSubject = recruiter.isEmailCustomized ? recruiter.customSubject : (subject || `Full Stack Developer Application - ${recruiter.company}`);
 
-    const emailSubject =
-      (recruiter.isEmailCustomized ? recruiter.customSubject : null) ||
-      subject ||
-      `Full Stack Developer Application - ${recruiter.company}`;
-
-    // Send the actual email
+    // Send email
     await sendEmail({
       to: recruiter.email,
       subject: emailSubject,
-      html,
+      html
     });
 
-    // Log success in DB
+    // Log success
     await prisma.emailLog.create({
       data: {
-        recruiterId: parsedRecruiterId,
+        recruiterId,
         userId: user.id,
         subject: emailSubject,
         body: html,
-        status: 'sent',
-      },
+        status: 'sent'
+      }
     });
 
     return Response.json({ success: true });
   } catch (err) {
     console.error('Error sending email:', err.message);
     return Response.json(
-      { error: 'Failed to send email due to internal server error' },
+      { error: 'Failed to send email' },
       { status: 500 }
     );
   }
