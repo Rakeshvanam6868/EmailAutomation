@@ -1,20 +1,49 @@
 import prisma from '@/lib/prisma';
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { recruiterId, subject, body } = req.body;
+export async function POST(req) {
+  try {
+    const body = await req.json();
+    const { recruiterId, subject, body: emailBody } = body;
 
-    await prisma.recruiter.update({
-      where: { id: recruiterId },
+    if (!recruiterId || !subject || !emailBody) {
+      return Response.json(
+        { error: 'Missing required fields: recruiterId, subject, or body' },
+        { status: 400 }
+      );
+    }
+
+    const parsedRecruiterId = parseInt(recruiterId, 10);
+    if (isNaN(parsedRecruiterId)) {
+      return Response.json({ error: 'Invalid recruiter ID' }, { status: 400 });
+    }
+
+    const recruiter = await prisma.recruiter.findUnique({
+      where: { id: parsedRecruiterId },
+    });
+
+    if (!recruiter) {
+      return Response.json({ error: 'Recruiter not found' }, { status: 404 });
+    }
+
+    // Update custom email fields
+    const updatedRecruiter = await prisma.recruiter.update({
+      where: { id: parsedRecruiterId },
       data: {
         isEmailCustomized: true,
-        customSubject: subject,
-        customBody: body,
+        customSubject: subject.trim(),
+        customBody: emailBody.trim(),
       },
     });
 
-    res.status(200).json({ message: 'Custom email saved' });
-  } else {
-    res.status(405).end();
+    return Response.json(
+      { message: 'Custom email saved successfully', recruiter: updatedRecruiter },
+      { status: 200 }
+    );
+  } catch (err) {
+    console.error('Error saving custom email:', err.message);
+    return Response.json(
+      { error: 'Failed to save custom email due to internal server error' },
+      { status: 500 }
+    );
   }
 }

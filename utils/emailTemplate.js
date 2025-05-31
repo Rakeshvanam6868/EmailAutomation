@@ -16,6 +16,6 @@ I specialize in creating seamless and scalable web applications, and I'm excited
 <strong>Rakesh Vanam</strong><br/>
 Full Stack Developer<br/>
 📞 +91 9392865593 | 📧 <a href="mailto:rakeshvanam2002@gmail.com">rakeshvanam2002@gmail.com</a><br/>
-🔗 <a href="https://www.linkedin.com/in/rakeshvanam1/ ">LinkedIn</a> | 
-<a href="https://github.com/rakeshvanam6868 ">GitHub</a></p>
+🔗 <a href="https://www.linkedin.com/in/rakeshvanam1/">LinkedIn</a>  | 
+<a href="https://github.com/rakeshvanam6868">GitHub</a></p> 
 `;
