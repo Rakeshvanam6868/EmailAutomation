@@ -1,21 +1,60 @@
+// export const getDefaultEmailContent = (recruiter, user) => `
+// <p>Dear ${recruiter.name},</p>
+// <p>I hope you're doing well! My name is <strong>Rakesh Vanam</strong>, a Full Stack Developer skilled in 
+// <strong>React.js</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, and <strong>PostgreSQL</strong>. 
+// I specialize in creating seamless and scalable web applications, and I'm excited to explore opportunities with 
+// <strong>${recruiter.company}</strong>.</p>
+// <p>I'm currently a Full Stack Developer Intern at <strong>5th Dimension Technologies</strong>, where I work on building scalable applications and enhancing user experiences. Some of my recent personal projects include:</p>
+// <ul>
+//   <li><strong>SPIRON.AI</strong>: A cutting-edge AI-powered web app built with <strong>React</strong> and <strong>Next.js</strong></li>
+//   <li><strong>FASTGRID</strong>: An interactive game designed to improve cognitive skills, built using <strong>React</strong> and <strong>Vite</strong></li>
+// </ul>
+// <p>I'm eager to contribute to <strong>${recruiter.company}</strong> with my skills and passion for building high-performance applications. Please find my resume linked below:</p>
+// <p><strong>📄 <a href="${user.resumeLink}">View Resume</a></strong></p>
+// <p>Looking forward to hearing from you!</p>
+// <p>Best regards,<br/>
+// <strong>Rakesh Vanam</strong><br/>
+// Full Stack Developer<br/>
+// 📞 +91 9392865593 | 📧 <a href="mailto:rakeshvanam2002@gmail.com">rakeshvanam2002@gmail.com</a><br/>
+// 🔗 <a href="https://www.linkedin.com/in/rakeshvanam1/">LinkedIn</a>  | 
+// <a href="https://github.com/rakeshvanam6868">GitHub</a></p> 
+// `;
+
 export const getDefaultEmailContent = (recruiter, user) => `
 <p>Dear ${recruiter.name},</p>
-<p>I hope you're doing well! My name is <strong>Rakesh Vanam</strong>, a Full Stack Developer skilled in 
-<strong>React.js</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, and <strong>PostgreSQL</strong>. 
-I specialize in creating seamless and scalable web applications, and I'm excited to explore opportunities with 
-<strong>${recruiter.company}</strong>.</p>
-<p>I'm currently a Full Stack Developer Intern at <strong>5th Dimension Technologies</strong>, where I work on building scalable applications and enhancing user experiences. Some of my recent personal projects include:</p>
+
+<p>I'm <strong>Rakesh Vanam</strong>, a Full Stack Developer with hands-on experience in building scalable web applications using <strong>Next.js, React, Node.js, PostgreSQL</strong>, and <strong>TailwindCSS</strong>. I'm excited about the work at <strong>${recruiter.company}</strong> and would love to explore opportunities to contribute.</p>
+
+<p>Currently, I'm interning at <strong>5th Dimension Technologies</strong>, where I've worked on:</p>
+
 <ul>
-  <li><strong>SPIRON.AI</strong>: A cutting-edge AI-powered web app built with <strong>React</strong> and <strong>Next.js</strong></li>
-  <li><strong>FASTGRID</strong>: An interactive game designed to improve cognitive skills, built using <strong>React</strong> and <strong>Vite</strong></li>
+  <li>A national-level educational platform with interactive storytelling and e-commerce capabilities.</li>
+  <li>A full-stack Learning Management System with OTP onboarding, teacher/student dashboards, assessments, and payments.</li>
+  <li>A mobile-first reading app using React Native with modern theming and smooth UI.</li>
 </ul>
-<p>I'm eager to contribute to <strong>${recruiter.company}</strong> with my skills and passion for building high-performance applications. Please find my resume linked below:</p>
-<p><strong>📄 <a href="${user.resumeLink}">View Resume</a></strong></p>
-<p>Looking forward to hearing from you!</p>
-<p>Best regards,<br/>
+
+<p>Here are a few of my recent personal projects:</p>
+
+<ul>
+  <li><strong>SPIRON.AI</strong>: AI-powered business assistant platform with chat, bookings, payments, Stripe integration, and CRM dashboard – built using <strong>Next.js</strong> and <strong>PostgreSQL</strong>.</li>
+  <li><strong>CASE COBRA</strong>: An eCommerce platform with a custom case designer, admin dashboard, authentication, and smooth UX using <strong>Next.js 14</strong> and <strong>TypeScript</strong>.</li>
+  <li><strong>VALUE HUNTER</strong>: A deal-discovery & price tracking app using <strong>MERN stack</strong> with Amazon API, real-time alerts, filters, and an SEO blog system.</li>
+</ul>
+
+<p>I’m truly passionate about building user-focused applications and growing with fast-moving teams. If there’s any opportunity at <strong>${recruiter.company}</strong> where I can contribute, I’d be glad to connect.</p>
+
+<p><strong>📄 <a href="${user.resumeLink}" target="_blank">View My Resume</a></strong></p>
+
+<p>Thank you for your time, and I look forward to hearing from you!</p>
+
+<p>
+Warm regards,<br/>
 <strong>Rakesh Vanam</strong><br/>
 Full Stack Developer<br/>
-📞 +91 9392865593 | 📧 <a href="mailto:rakeshvanam2002@gmail.com">rakeshvanam2002@gmail.com</a><br/>
-🔗 <a href="https://www.linkedin.com/in/rakeshvanam1/">LinkedIn</a>  | 
-<a href="https://github.com/rakeshvanam6868">GitHub</a></p> 
+📞 +91 9392865593<br/>
+📧 <a href="mailto:rakeshvanam2002@gmail.com">rakeshvanam2002@gmail.com</a><br/>
+🔗 <a href="https://www.linkedin.com/in/rakeshvanam1/">LinkedIn</a> | 
+<a href="https://github.com/rakeshvanam6868">GitHub</a> | 
+<a href="https://rakesh-vanam.vercel.app/">Portfolio</a>
+</p>
 `;
