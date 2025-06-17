@@ -62,41 +62,72 @@
 
 
 // Frontend Developer Email Template
+// export const getDefaultEmailContent = (recruiter, user) => `
+// <p>Dear ${recruiter.name},</p>
+
+// <p>I'm <strong>Rakesh Vanam</strong>, a passionate Frontend Developer with hands-on experience in building high-performance, user-centric web interfaces using <strong>React.js</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>TailwindCSS</strong>.</p>
+
+// <p>I came across <strong>${recruiter.company}</strong> and was impressed by your work. I’d love to explore any frontend-focused opportunities where I can contribute my skills and grow with your team.</p>
+
+// <p>Currently, I’m a Full Stack Developer Intern at <strong>5th Dimension Technologies</strong>, where I’ve worked on:</p>
+
+// <ul>
+//   <li>A national educational platform with scroll-based storytelling and e-commerce experiences.</li>
+//   <li>A responsive Learning Management System dashboard with course creation and assessment flows.</li>
+//   <li>A mobile-first reading app with dark/light mode and smooth UI transitions using React Native + Expo.</li>
+// </ul>
+
+// <p>Some of my recent frontend-focused personal projects include:</p>
+
+// <ul>
+//   <li><strong>SPIRON.AI</strong> – An AI-powered business platform with real-time chat, bookings, and dashboard UI, built using <strong>Next.js</strong> and <strong>TailwindCSS</strong>.</li>
+//   <li><strong>CASE COBRA</strong> – A modern eCommerce site with an Apple-style case configurator and admin dashboard, built in <strong>Next.js 14</strong> with <strong>shadcn/ui</strong> and <strong>TypeScript</strong>.</li>
+//   <li><strong>VALUE HUNTER</strong> – A deal-tracking app with responsive UI, theme toggle, SEO blog, and Amazon API integration using the <strong>React</strong> ecosystem.</li>
+// </ul>
+
+// <p>I'm highly focused on creating responsive, accessible, and pixel-perfect interfaces that deliver great UX. If there’s any opportunity at <strong>${recruiter.company}</strong> where I can contribute as a frontend developer, I’d be excited to connect.</p>
+
+// <p><strong>📄 <a href="${user.resumeLink}" target="_blank">View My Resume</a></strong></p>
+
+// <p>Thanks for your time, and I look forward to hearing from you!</p>
+
+// <p>
+// Warm regards,<br/>
+// <strong>Rakesh Vanam</strong><br/>
+// Frontend Developer<br/>
+// 📞 +91 9392865593<br/>
+// 📧 <a href="mailto:rakeshvanam2002@gmail.com">rakeshvanam2002@gmail.com</a><br/>
+// 🔗 <a href="https://www.linkedin.com/in/rakeshvanam1/">LinkedIn</a> | 
+// <a href="https://github.com/rakeshvanam6868">GitHub</a> | 
+// <a href="https://rakesh-vanam.vercel.app/">Portfolio</a>
+// </p>
+// `;
+
+
 export const getDefaultEmailContent = (recruiter, user) => `
-<p>Dear ${recruiter.name},</p>
+<p>Hi ${recruiter.name},</p>
 
-<p>I'm <strong>Rakesh Vanam</strong>, a passionate Frontend Developer with hands-on experience in building high-performance, user-centric web interfaces using <strong>React.js</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>TailwindCSS</strong>.</p>
+<p>I'm Rakesh Vanam, a Frontend Developer experienced with <strong>React.js, Next.js, TailwindCSS</strong>, and <strong>JavaScript</strong>. I came across ${recruiter.company} and really liked what you’re building—so I wanted to reach out and see if there might be any frontend roles or referrals you’d recommend.</p>
 
-<p>I came across <strong>${recruiter.company}</strong> and was impressed by your work. I’d love to explore any frontend-focused opportunities where I can contribute my skills and grow with your team.</p>
+<p>I’m currently interning at <strong>5th Dimension Technologies</strong>, where I’ve worked on an educational platform, a full LMS, and a mobile reading app using React Native.</p>
 
-<p>Currently, I’m a Full Stack Developer Intern at <strong>5th Dimension Technologies</strong>, where I’ve worked on:</p>
-
+<p>In my personal time, I’ve built projects like:</p>
 <ul>
-  <li>A national educational platform with scroll-based storytelling and e-commerce experiences.</li>
-  <li>A responsive Learning Management System dashboard with course creation and assessment flows.</li>
-  <li>A mobile-first reading app with dark/light mode and smooth UI transitions using React Native + Expo.</li>
+  <li><strong>SPIRON.AI</strong> – AI assistant platform with chat, bookings, and dashboard</li>
+  <li><strong>CASE COBRA</strong> – Custom eCommerce site with case designer and admin panel</li>
+  <li><strong>VALUE HUNTER</strong> – Deal tracker with theme toggle, filters, and Amazon API</li>
 </ul>
 
-<p>Some of my recent frontend-focused personal projects include:</p>
+<p>If you think I’d be a good fit for any roles or can point me in the right direction, I’d really appreciate it!</p>
 
-<ul>
-  <li><strong>SPIRON.AI</strong> – An AI-powered business platform with real-time chat, bookings, and dashboard UI, built using <strong>Next.js</strong> and <strong>TailwindCSS</strong>.</li>
-  <li><strong>CASE COBRA</strong> – A modern eCommerce site with an Apple-style case configurator and admin dashboard, built in <strong>Next.js 14</strong> with <strong>shadcn/ui</strong> and <strong>TypeScript</strong>.</li>
-  <li><strong>VALUE HUNTER</strong> – A deal-tracking app with responsive UI, theme toggle, SEO blog, and Amazon API integration using the <strong>React</strong> ecosystem.</li>
-</ul>
+<p><strong>📄 <a href="${user.resumeLink}" target="_blank">My Resume</a></strong></p>
 
-<p>I'm highly focused on creating responsive, accessible, and pixel-perfect interfaces that deliver great UX. If there’s any opportunity at <strong>${recruiter.company}</strong> where I can contribute as a frontend developer, I’d be excited to connect.</p>
-
-<p><strong>📄 <a href="${user.resumeLink}" target="_blank">View My Resume</a></strong></p>
-
-<p>Thanks for your time, and I look forward to hearing from you!</p>
+<p>Thanks so much for reading and hope to connect soon!</p>
 
 <p>
-Warm regards,<br/>
-<strong>Rakesh Vanam</strong><br/>
-Frontend Developer<br/>
-📞 +91 9392865593<br/>
-📧 <a href="mailto:rakeshvanam2002@gmail.com">rakeshvanam2002@gmail.com</a><br/>
+Best,<br/>
+Rakesh Vanam<br/>
+📧 <a href="mailto:rakeshvanam2002@gmail.com">rakeshvanam2002@gmail.com</a> | 📞 +91 9392865593<br/>
 🔗 <a href="https://www.linkedin.com/in/rakeshvanam1/">LinkedIn</a> | 
 <a href="https://github.com/rakeshvanam6868">GitHub</a> | 
 <a href="https://rakesh-vanam.vercel.app/">Portfolio</a>

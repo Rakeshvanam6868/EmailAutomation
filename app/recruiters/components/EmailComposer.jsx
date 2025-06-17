@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 export default function EmailComposer({ recruiter, onClose }) {
-  const [subject, setSubject] = useState(`Full Stack Developer Application - ${recruiter?.company}`);
+  const [subject, setSubject] = useState(`Frontend Developer Application - ${recruiter?.company}`);
   const [body, setBody] = useState(`
 <p>Dear ${recruiter?.name},</p>
 <p>I hope you're doing well! My name is Rakesh Vanam, a Full Stack Developer skilled in React.js, Next.js, Node.js, and PostgreSQL. I specialize in creating seamless and scalable web applications, and I'm excited to explore opportunities with ${recruiter?.company}.</p>
