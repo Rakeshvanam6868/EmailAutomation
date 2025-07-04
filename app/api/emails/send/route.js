@@ -27,7 +27,7 @@ export async function POST(req) {
     }
 
     const html = recruiter.isEmailCustomized ? recruiter.customBody : (customBody || getDefaultEmailContent(recruiter, user));
-    const emailSubject = recruiter.isEmailCustomized ? recruiter.customSubject : (subject || `Full Stack Developer Application - ${recruiter.company}`);
+    const emailSubject = recruiter.isEmailCustomized ? recruiter.customSubject : (subject || `Frontend Developer Application - ${recruiter.company}`);
 
     // Send email
     await sendEmail({
