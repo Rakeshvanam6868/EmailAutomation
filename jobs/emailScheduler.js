@@ -26,7 +26,7 @@ export async function scheduleOneTimeEmailJob() {
   for (const rec of recruiters) {
     const subject = rec.isEmailCustomized
       ? rec.customSubject
-      : `Full Stack Developer Application - ${rec.company}`;
+      : `Frontend Developer Application - ${rec.company}`;
     const body = rec.isEmailCustomized
       ? rec.customBody
       : getDefaultEmailContent(rec, user);
